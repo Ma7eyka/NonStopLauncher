@@ -1,0 +1,83 @@
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.75);
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+  animation: fade-in 0.2s ease;
+}
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-box {
+  width: 620px; max-height: 85vh;
+  background: var(--bg-secondary);
+  border-radius: 14px; border: 1px solid var(--border);
+  overflow: hidden; display: flex; flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7);
+  animation: modal-in 0.25s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes modal-in {
+  from { transform: scale(0.92) translateY(20px); opacity: 0; }
+  to   { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  position: relative; height: 180px;
+  background: var(--bg-hover) center/cover no-repeat;
+  flex-shrink: 0; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 16px 20px 14px;
+}
+.modal-header-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+}
+.modal-close-btn {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  width: 28px; height: 28px; border-radius: 6px;
+  background: rgba(0,0,0,0.5); border: none;
+  color: var(--text-secondary); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.modal-close-btn:hover { background: var(--accent); color: #fff; }
+
+.modal-title-block { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; }
+.modal-game-title { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.modal-meta { display: flex; gap: 8px; align-items: center; font-size: 12px; color: rgba(255,255,255,0.7); }
+
+.modal-actions { position: relative; z-index: 1; margin-top: 10px; }
+.modal-play-btn { display: flex; align-items: center; gap: 6px; }
+
+.modal-tabs {
+  display: flex; border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary); flex-shrink: 0;
+}
+.modal-tab {
+  padding: 10px 20px; border: none; background: none;
+  color: var(--text-secondary); font-size: 13px; cursor: pointer;
+  border-bottom: 2px solid transparent; transition: all 0.15s;
+  font-family: 'Inter', sans-serif;
+}
+.modal-tab:hover { color: var(--text-primary); }
+.modal-tab.active { color: var(--text-primary); border-bottom-color: var(--accent); }
+
+.modal-content { padding: 20px; overflow-y: auto; flex: 1; }
+
+/* Info tab */
+.info-grid { display: flex; flex-direction: column; gap: 12px; }
+.info-row { display: flex; align-items: flex-start; gap: 12px; }
+.info-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); width: 110px; flex-shrink: 0; padding-top: 1px; }
+.info-value { font-size: 13px; color: var(--text-primary); flex: 1; word-break: break-all; }
+.info-value.mono { font-family: monospace; font-size: 11px; color: var(--text-secondary); }
+
+/* Settings tab */
+.setting-group { margin-bottom: 16px; }
+.setting-label { display: block; font-size: 12px; font-weight: 600; color: var(--text-secondary); margin-bottom: 8px; }
+.setting-hint { font-size: 11px; color: var(--text-dim); margin-top: 6px; }
+
+/* Files tab */
+.file-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.file-label { font-size: 11px; color: var(--text-dim); width: 80px; flex-shrink: 0; }
+.file-path { flex: 1; font-size: 11px; font-family: monospace; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.files-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.files-actions .btn { justify-content: flex-start; }
+.btn.danger:hover { color: var(--accent-bright); border-color: var(--accent); }

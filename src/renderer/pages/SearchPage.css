@@ -1,0 +1,127 @@
+.search-page-header {
+  margin-bottom: 28px;
+}
+.search-page-header h1 { font-size: 28px; margin-bottom: 4px; }
+
+.search-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.search-wrapper.big { flex: 1; }
+
+.search-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  padding: 40px 0;
+  justify-content: center;
+}
+
+.spinner {
+  width: 22px; height: 22px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.search-empty {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--text-secondary);
+}
+.search-empty span { font-size: 40px; display: block; margin-bottom: 12px; }
+
+.results-count {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.results-list { display: flex; flex-direction: column; gap: 10px; }
+
+.repack-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  gap: 16px;
+}
+
+.repack-info { flex: 1; min-width: 0; }
+
+.repack-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.repack-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.history-section { margin-bottom: 28px; }
+.history-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 10px; }
+.history-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  padding: 5px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.chip:hover { background: var(--bg-hover); color: var(--text-primary); border-color: var(--accent); }
+
+.btn-spinner {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.repack-actions { display: flex; gap: 8px; flex-shrink: 0; align-items: center; }
+.search-loading { display: flex; align-items: center; gap: 12px; color: var(--text-secondary); padding: 40px 0; justify-content: center; }
+.search-empty { text-align: center; padding: 60px 0; color: var(--text-secondary); }
+.search-empty span { font-size: 40px; display: block; margin-bottom: 12px; }
+
+/* Popular game cards */
+.popular-section-search { margin-bottom: 24px; }
+.popular-title-search {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--text-dim); margin-bottom: 12px;
+}
+.popular-cards-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px;
+}
+.popular-card {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 8px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  cursor: pointer; transition: all 0.15s; text-align: left;
+}
+.popular-card:hover { border-color: var(--accent); background: rgba(192,57,43,0.08); transform: translateY(-1px); }
+.popular-card-letter {
+  width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700;
+}
+.popular-card-title { font-size: 12px; font-weight: 600; color: var(--text-secondary); }
+.popular-card:hover .popular-card-title { color: var(--text-primary); }

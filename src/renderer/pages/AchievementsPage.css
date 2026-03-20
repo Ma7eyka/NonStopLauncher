@@ -1,0 +1,39 @@
+.ach-page { }
+.ach-header { margin-bottom: 24px; }
+.ach-header h1 { font-size: 28px; margin-bottom: 4px; }
+
+.ach-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px; margin-bottom: 28px;
+}
+.stat-card { display: flex; align-items: center; gap: 14px; padding: 16px 18px; }
+.stat-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(192,57,43,0.12); display: flex; align-items: center; justify-content: center; color: var(--accent-bright); flex-shrink: 0; }
+.stat-val  { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700; color: var(--text-primary); }
+.stat-lbl  { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+
+.ach-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+
+.ach-card { display: flex; align-items: center; gap: 14px; padding: 14px 16px; transition: all 0.2s; }
+.ach-card.unlocked { border-color: rgba(241,196,15,0.25); }
+.ach-card.locked   { opacity: 0.45; }
+
+.ach-icon-wrap {
+  width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+  background: var(--bg-hover); display: flex; align-items: center; justify-content: center;
+  color: var(--text-dim);
+}
+.ach-icon-wrap.done { background: rgba(241,196,15,0.12); color: #f1c40f; }
+.ach-icon-wrap svg  { width: 20px; height: 20px; }
+
+.ach-info { flex: 1; }
+.ach-title { font-weight: 700; font-size: 13px; margin-bottom: 3px; }
+.ach-desc  { font-size: 11px; color: var(--text-secondary); }
+
+.ach-check {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #f1c40f; color: #000;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+.ach-card.locked .ach-icon { color: var(--text-dim); }
+.ach-card.unlocked .ach-icon { color: #f1c40f; }

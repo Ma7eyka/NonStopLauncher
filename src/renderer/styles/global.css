@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-primary:   #0d0d0f;
+  --bg-secondary: #141418;
+  --bg-card:      #1a1a20;
+  --bg-hover:     #222228;
+  --accent:       #c0392b;
+  --accent-bright:#e74c3c;
+  --accent-glow:  rgba(192, 57, 43, 0.35);
+  --text-primary: #f0f0f0;
+  --text-secondary:#9a9aaa;
+  --text-dim:     #555566;
+  --border:       rgba(255,255,255,0.06);
+  --radius:       10px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+  user-select: none;
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 32px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-hover) transparent;
+}
+
+.app-content::-webkit-scrollbar { width: 6px; }
+.app-content::-webkit-scrollbar-thumb {
+  background: var(--bg-hover);
+  border-radius: 3px;
+}
+
+/* Типография */
+h1, h2, h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Кнопки */
+.btn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.18s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--accent-bright);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* Карточки */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* Инпут поиска */
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.18s ease;
+}
+.search-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.search-input::placeholder { color: var(--text-dim); }
+
+/* Прогресс бар */
+.progress-bar {
+  height: 4px;
+  background: var(--bg-hover);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Badge */
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.badge-green  { background: rgba(39,174,96,0.2);  color: #2ecc71; }
+.badge-yellow { background: rgba(241,196,15,0.2); color: #f1c40f; }
+.badge-red    { background: rgba(192,57,43,0.2);  color: var(--accent-bright); }
+
+/* Спиннер */
+.spinner {
+  width: 22px; height: 22px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+.spinner-sm {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Cover placeholder */
+.cover-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 48px; font-weight: 700;
+  color: var(--text-dim);
+  background: linear-gradient(135deg, var(--bg-hover), var(--bg-card));
+}
+
+/* btn-icon */
+.btn-icon {
+  width: 32px; height: 32px;
+  border: none; border-radius: 6px;
+  background: rgba(0,0,0,0.5);
+  color: var(--text-secondary);
+  cursor: pointer; font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-icon.danger:hover { background: var(--accent); color: #fff; }
+
+/* library empty */
+.library-empty {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 12px; padding: 80px 0;
+  color: var(--text-secondary);
+}
+.library-empty span { font-size: 48px; }
+
+/* State views (empty, loading, error) */
+.state-view {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 14px; padding: 80px 0;
+  color: var(--text-dim);
+}
+.state-view p { color: var(--text-secondary); font-size: 14px; }
+.state-view .hint { font-size: 12px; color: var(--text-dim); }
+
+/* Icon + text button */
+.btn.icon-text {
+  display: flex; align-items: center; gap: 6px;
+}
+
+/* dim text */
+.dim { color: var(--text-dim); }
+
+:root {
+  --btn-radius: 6px;
+  --base-font: 14px;
+}
+body { font-size: var(--base-font); }
+.btn { border-radius: var(--btn-radius); }
+.card { position: relative; z-index: 1; }
+.app { position: relative; z-index: 1; }
+
+/* App background */
+.app-bg {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+}
+.app { position: relative; z-index: 1; }
+.app-body, .app-content, .sidebar, .titlebar {
+  position: relative; z-index: 1;
+}
+
+/* ── Light theme ──────────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-primary:   #f0f0f4;
+  --bg-secondary: #ffffff;
+  --bg-card:      #f8f8fc;
+  --bg-hover:     #ebebf0;
+  --text-primary: #1a1a2e;
+  --text-secondary:#4a4a6a;
+  --text-dim:     #8a8aaa;
+  --border:       rgba(0,0,0,0.08);
+}
+[data-theme="light"] .cover-placeholder {
+  background: linear-gradient(160deg, #e8e8f0 0%, #d8d8e8 100%);
+}
+[data-theme="light"] .lib-select {
+  background: #fff; color: var(--text-secondary);
+}

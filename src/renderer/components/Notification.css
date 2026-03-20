@@ -1,0 +1,25 @@
+.notif-container {
+  position: fixed; bottom: 20px; right: 20px;
+  display: flex; flex-direction: column; gap: 10px;
+  z-index: 9999; pointer-events: none;
+}
+.notif {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 10px; min-width: 280px; max-width: 360px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  pointer-events: all;
+  animation: notif-in 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes notif-in {
+  from { transform: translateX(120%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+.notif-achievement { border-color: #f1c40f; background: linear-gradient(135deg, #1a1600 0%, var(--bg-card) 60%); }
+.notif-record      { border-color: var(--accent); background: linear-gradient(135deg, #1a0500 0%, var(--bg-card) 60%); }
+.notif-icon { font-size: 24px; flex-shrink: 0; }
+.notif-body { flex: 1; min-width: 0; }
+.notif-title { font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; color: var(--text-primary); }
+.notif-desc  { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+.notif-close { background: none; border: none; color: var(--text-dim); cursor: pointer; font-size: 11px; padding: 0 4px; flex-shrink: 0; }
+.notif-close:hover { color: var(--text-primary); }
