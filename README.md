@@ -1,244 +1,187 @@
 <div align="center">
-  <img src="assets/icon.png" width="100" alt="NonStop Launcher"/>
-  <br/>
-  <br/>
 
-  # NonStop Launcher
+<img src="assets/icon.png" width="96" alt="NonStop Launcher" />
 
-  **Open-source game launcher with built-in torrent downloader**
+# NonStop Launcher
 
-  [![Version](https://img.shields.io/github/v/release/Ma7eyka/NonStopLauncher?style=flat-square&color=c0392b&label=version)](https://github.com/Ma7eyka/NonStopLauncher/releases/latest)
-  [![Downloads](https://img.shields.io/github/downloads/Ma7eyka/NonStopLauncher/total?style=flat-square&color=8e44ad)](https://github.com/Ma7eyka/NonStopLauncher/releases)
-  [![Platform](https://img.shields.io/badge/platform-Windows-0078d4?style=flat-square)](https://github.com/Ma7eyka/NonStopLauncher/releases)
-  [![License](https://img.shields.io/badge/license-MIT-27ae60?style=flat-square)](LICENSE)
-  [![Electron](https://img.shields.io/badge/electron-29-47848F?style=flat-square)](https://electronjs.org)
-  [![React](https://img.shields.io/badge/react-18-61DAFB?style=flat-square)](https://reactjs.org)
+A free, open-source game launcher with a built-in torrent downloader.  
+Find repacks, download, and launch — all in one place.
 
-  <br/>
+[![Version](https://img.shields.io/github/v/release/Ma7eyka/NonStopLauncher?style=flat-square&color=c0392b)](https://github.com/Ma7eyka/NonStopLauncher/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Ma7eyka/NonStopLauncher/total?style=flat-square&color=555)](https://github.com/Ma7eyka/NonStopLauncher/releases)
+[![Platform](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)](https://github.com/Ma7eyka/NonStopLauncher/releases)
+[![License](https://img.shields.io/badge/license-MIT-27ae60?style=flat-square)](LICENSE)
 
-  <a href="https://github.com/Ma7eyka/NonStopLauncher/releases/latest">
-    <img src="https://img.shields.io/badge/⬇%20Download%20Latest-NonStop%20Launcher-c0392b?style=for-the-badge&logoColor=white" alt="Download"/>
-  </a>
-
-  <br/>
-  <br/>
-
-  > Inspired by [Hydra Launcher](https://github.com/hydralauncher/hydra) — built from scratch with ❤️
+**[Download](https://github.com/Ma7eyka/NonStopLauncher/releases/latest)** — Windows x64
 
 </div>
 
 ---
 
-## 📸 Screenshots
+## Overview
 
-> **Coming soon** — screenshots will be added in the next update.
->
-> Want to contribute screenshots? Open a [Pull Request](https://github.com/Ma7eyka/NonStopLauncher/pulls)!
+NonStop Launcher is a desktop application built with Electron and React. It lets you search for game repacks from sources like FitGirl Repacks, download them via a built-in BitTorrent client, and manage your game library — without ever leaving the app.
 
----
-
-## ✨ Features
-
-<table>
-  <tr>
-    <td>🔍 <b>Repack Search</b></td>
-    <td>Search FitGirl Repacks and SteamRIP directly inside the app</td>
-  </tr>
-  <tr>
-    <td>⬇️ <b>Torrent Downloader</b></td>
-    <td>Built-in WebTorrent with speed graphs, pause/resume, auto-resume after restart</td>
-  </tr>
-  <tr>
-    <td>🎮 <b>Game Library</b></td>
-    <td>Beautiful card grid with Steam covers, sort & filter, playtime tracking</td>
-  </tr>
-  <tr>
-    <td>📄 <b>Game Page</b></td>
-    <td>Full info page with Steam description, screenshots, genres, release date</td>
-  </tr>
-  <tr>
-    <td>🗂️ <b>System Tray</b></td>
-    <td>Minimize to tray — downloads continue in the background</td>
-  </tr>
-  <tr>
-    <td>🏆 <b>Achievements</b></td>
-    <td>Unlock 10 achievements as you build your library and play games</td>
-  </tr>
-  <tr>
-    <td>📊 <b>Statistics</b></td>
-    <td>Playtime charts by day, top games leaderboard, daily averages</td>
-  </tr>
-  <tr>
-    <td>🌍 <b>Multi-language</b></td>
-    <td>Russian, English, Ukrainian — switch instantly in Settings</td>
-  </tr>
-  <tr>
-    <td>🎨 <b>Customization</b></td>
-    <td>Accent colors, dark/light theme, custom backgrounds (image, GIF, video)</td>
-  </tr>
-  <tr>
-    <td>💾 <b>Backup</b></td>
-    <td>Export and import your game library as a JSON file</td>
-  </tr>
-  <tr>
-    <td>🔔 <b>Notifications</b></td>
-    <td>Sound notifications for download completion, achievements and records</td>
-  </tr>
-</table>
-
-> ⚠️ **Auto-update (OTA) is temporarily disabled.** Please update manually via [Releases](https://github.com/Ma7eyka/NonStopLauncher/releases). Will be re-enabled in a future version.
+Inspired by [Hydra Launcher](https://github.com/hydralauncher/hydra). Built from scratch.
 
 ---
 
-## 🚀 Installation
+## Features
 
-### Option 1 — Download installer *(recommended)*
+**Library**  
+Steam covers fetched automatically. Sort by recently added, name, or playtime. Filter by installed or downloading. Click any game to open its full info page with Steam screenshots and description.
 
-1. Go to [**Releases**](https://github.com/Ma7eyka/NonStopLauncher/releases/latest)
-2. Download `NonStop.Launcher.Setup.x.x.x.exe`
-3. Run the installer and enjoy 🎮
+**Downloads**  
+WebTorrent-powered with real-time speed graphs, pause/resume, and auto-resume after restart. Downloads continue in the system tray when the window is closed.
 
-### Option 2 — Build from source
+**Playtime tracking**  
+Tracks time spent in each game using process polling — counts only while the game process is actually running.
 
-**Requirements:** Node.js 18+, npm 8+
+**Achievements**  
+10 unlockable achievements tied to your library size and playtime.
+
+**Statistics**  
+14-day playtime chart, top games leaderboard, daily average.
+
+**Customization**  
+Accent color, dark/light theme, custom background (image, GIF, or video).
+
+**Multi-language**  
+Russian, English, Ukrainian — switch instantly in Settings.
+
+**Backup**  
+Export and import your library as a JSON file.
+
+---
+
+## Screenshots
+
+> Coming soon. Want to contribute? Open a pull request.
+
+---
+
+## Installation
+
+Download the latest installer from [Releases](https://github.com/Ma7eyka/NonStopLauncher/releases/latest) and run it.
+
+**Build from source:**
 
 ```bash
-# Clone the repository
 git clone https://github.com/Ma7eyka/NonStopLauncher
 cd NonStopLauncher
-
-# Install dependencies
 npm install
-
-# Run in development mode
 npm run electron:dev
-
-# Build installer
-npm run electron:build
-# → Output: release/NonStop Launcher Setup x.x.x.exe
 ```
 
+**Build installer:**
+
+```bash
+npm run electron:build
+```
+
+Output: `release/NonStop Launcher Setup x.x.x.exe`
+
 ---
 
-## 🛠️ Tech Stack
+## Stack
 
-| Layer | Technology |
+| | |
 |---|---|
-| **UI Framework** | React 18 + Vite 5 |
-| **Desktop Shell** | Electron 29 |
-| **Database** | sql.js (SQLite — no native compilation needed) |
-| **Torrents** | WebTorrent 2 |
-| **Game Covers** | Steam Store API |
-| **HTTP Client** | Axios |
-| **Build Tool** | electron-builder 24 |
+| UI | React 18 + Vite 5 |
+| Desktop | Electron 29 |
+| Database | sql.js (SQLite — no native build required) |
+| Torrents | WebTorrent 2 |
+| Covers | Steam Store API |
 
 ---
 
-## 📋 Changelog
-
-### v1.0.4
-- 🐛 **Fix:** Sidebar labels now display correctly in all languages
-- 🐛 **Fix:** Playtime counter now tracks accurately while game is running
-- 🐛 **Fix:** "Never played" status updates after first launch
-- ✨ **New:** Animated "Playing" badge on game card while game is open
-- ✨ **New:** Playtime shows hours and minutes format
-
-### v1.0.3
-- ✨ **New:** Multi-language support — Russian, English, Ukrainian
-- ✨ **New:** Changelog panel moved to right-side FAB with unique icon
-- ✨ **New:** Settings reorganized into clear labeled sections (Language, Theme, Appearance, Downloads, Backup)
-- ✨ **New:** Improved GitHub README
-
-### v1.0.2
-- 🐛 **Fix:** `setup.exe` now launches with admin rights (UAC prompt)
-- 🐛 **Fix:** Duplicate downloads and phantom database records eliminated
-- 🐛 **Fix:** Progress correctly saved on launcher close
-- ✨ **New:** Downloads auto-resume after launcher restart
-- ✨ **New:** Smart cover search — GTA IV, HL2, RDR2 abbreviations supported
-- ✨ **New:** Option to delete downloaded files when cancelling
-- ✨ **New:** Achievements system (10 achievements) with sound notifications
-- ✨ **New:** Game modal with tabs: Info, Settings, Files
-- ✨ **New:** Launch arguments support per game
-- ✨ **New:** System tray support — downloads continue when minimized
-- ✨ **New:** Game page with Steam screenshots and description
-- ✨ **New:** Statistics page with 14-day playtime chart
-- ✨ **New:** Sort and filter in library (Recent / Name / Playtime, All / Installed / Downloading)
-- ✨ **New:** Dark / Light theme toggle
-- ✨ **New:** Export / Import library backup (JSON)
-- ✨ **New:** Auto-updater with animated update screen *(temporarily disabled)*
-
-### v1.0.1
-- 🐛 **Fix:** `existing.destroy is not a function` error
-- 🐛 **Fix:** HTML entities in magnet links (`&#038;`)
-- 🐛 **Fix:** `lastId()` in database returning 0
-- ✨ **New:** Real-time download speed chart with gap markers
-- ✨ **New:** Steam Store API game covers
-- ✨ **New:** Settings page — accent color, background, button style
-
-### v1.0.0 — *Initial Release*
-- ✨ FitGirl Repacks and SteamRIP search
-- ✨ WebTorrent-powered torrent downloader
-- ✨ Game library with Steam covers
-- ✨ Custom frameless Electron window
-- ✨ SQLite database (sql.js)
-- ✨ Downloads page with real-time progress
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how:
-
-1. **Fork** this repository
-2. **Create** a branch: `git checkout -b feature/your-feature`
-3. **Commit** your changes: `git commit -m "Add: your feature"`
-4. **Push**: `git push origin feature/your-feature`
-5. **Open** a Pull Request
-
-### Areas that need help
-- 📸 Screenshots for the README
-- 🌍 More languages (German, French, Polish, etc.)
-- 🐛 Bug reports via [Issues](https://github.com/Ma7eyka/NonStopLauncher/issues)
-- 💡 Feature ideas via [Discussions](https://github.com/Ma7eyka/NonStopLauncher/discussions)
-
----
-
-## 📦 Publishing a Release
-
-> Only for maintainers
+## Releasing a new version
 
 1. Bump `version` in `package.json`
 2. Add entry to `src/renderer/components/Changelog.jsx`
-3. Get a [**classic** GitHub Token](https://github.com/settings/tokens) with `repo` scope (token starts with `ghp_`)
+3. Create a [classic GitHub token](https://github.com/settings/tokens) with `repo` scope — must start with `ghp_`
 4. Run:
+
 ```powershell
-$env:GH_TOKEN = "ghp_your_token_here"
+$env:GH_TOKEN = "ghp_your_token"
 npm run electron:build -- --publish always
 ```
 
 ---
 
-## ⚠️ Disclaimer
+## Changelog
 
-This project is for **educational purposes only**. The developers are not responsible for how the software is used. Please respect intellectual property rights and copyright laws in your country.
+### v1.0.7
+- Playtime counter now verifies the game process is actually running via `tasklist`
+- Hours stop counting when the game is closed
+- Full translation of all pages — Russian, English, Ukrainian
+- Closing the window always minimizes to tray
+
+### v1.0.6
+- Playtime counter works for games that spawn a child process and exit
+- "Never played" status updates immediately on first launch
+- Tray icon click always restores the window
+- Closing the window minimizes to tray instead of quitting
+
+### v1.0.5
+- Fixed grey screen on startup
+- Fixed OTA update check using GitHub API directly
+- Faster startup
+
+### v1.0.4
+- Fixed sidebar labels not displaying
+- "Never played" status fixed
+- "Playing" badge on game card while game is open
+- Playtime shows hours and minutes
+
+### v1.0.3
+- Russian, English, Ukrainian language support
+- Changelog moved to right-side panel with a dedicated icon
+- Settings reorganized into labeled sections
+
+### v1.0.2
+- Fixed setup.exe launch requiring admin rights
+- Fixed duplicate downloads and phantom database records
+- Auto-resume downloads after launcher restart
+- Game modal with Info / Settings / Files tabs
+- Launch arguments per game
+- System tray support
+- Game page with Steam screenshots
+- Statistics page with 14-day playtime chart
+- Sort and filter in library
+- Dark / light theme
+- Export / import library backup
+- Auto-updater with animated update screen
+
+### v1.0.1
+- Fixed `lastId()` returning 0 in database
+- Fixed HTML entities in magnet links
+- Real-time download speed chart
+- Steam Store API covers
+
+### v1.0.0
+- Initial release
+- FitGirl Repacks and SteamRIP search
+- WebTorrent downloader
+- Game library with Steam covers
+- Frameless Electron window
 
 ---
 
-## 📄 License
+## Contributing
 
-[MIT](LICENSE) © 2026 [Ma7eyka](https://github.com/Ma7eyka)
+Issues and pull requests are welcome.  
+If something is broken, open an [issue](https://github.com/Ma7eyka/NonStopLauncher/issues).  
+If you want to add something, open a [discussion](https://github.com/Ma7eyka/NonStopLauncher/discussions) first.
 
 ---
 
-<div align="center">
-  <br/>
-  <b>NonStop Launcher</b> — Game more, hassle less.
-  <br/>
-  <br/>
-  <a href="https://github.com/Ma7eyka/NonStopLauncher/releases/latest">⬇ Download</a> •
-  <a href="https://github.com/Ma7eyka/NonStopLauncher/issues">🐛 Report Bug</a> •
-  <a href="https://github.com/Ma7eyka/NonStopLauncher/discussions">💬 Discuss</a>
-  <br/>
-  <br/>
-  <sub>If you like this project, give it a ⭐</sub>
-</div>
+## Disclaimer
+
+This project is for educational purposes. The developers are not responsible for how it is used. Respect copyright law in your country.
+
+---
+
+## License
+
+[MIT](LICENSE) — Ma7eyka, 2026
