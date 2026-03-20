@@ -12,7 +12,24 @@ Find repacks, download, and launch — all in one place.
 [![Platform](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)](https://github.com/Ma7eyka/NonStopLauncher/releases)
 [![License](https://img.shields.io/badge/license-MIT-27ae60?style=flat-square)](LICENSE)
 
-**[Download](https://github.com/Ma7eyka/NonStopLauncher/releases/latest)** — Windows x64
+**[Download latest release](https://github.com/Ma7eyka/NonStopLauncher/releases/latest)** — Windows x64
+
+</div>
+
+---
+
+## Screenshots
+
+<div align="center">
+
+<img src="assets/Librare.png" width="49%" alt="Library" />
+<img src="assets/Find.png" width="49%" alt="Search" />
+
+<img src="assets/Downloads.png" width="49%" alt="Downloads" />
+<img src="assets/Ach.png" width="49%" alt="Achievements" />
+
+<img src="assets/Stat.png" width="49%" alt="Statistics" />
+<img src="assets/Settings.png" width="49%" alt="Settings" />
 
 </div>
 
@@ -51,12 +68,6 @@ Russian, English, Ukrainian — switch instantly in Settings.
 
 **Backup**  
 Export and import your library as a JSON file.
-
----
-
-## Screenshots
-
-> Coming soon. Want to contribute? Open a pull request.
 
 ---
 
@@ -151,7 +162,6 @@ npm run electron:build -- --publish always
 - Sort and filter in library
 - Dark / light theme
 - Export / import library backup
-- Auto-updater with animated update screen
 
 ### v1.0.1
 - Fixed `lastId()` returning 0 in database
